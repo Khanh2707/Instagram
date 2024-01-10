@@ -56,12 +56,15 @@ export function checkNavigationActive() {
             previousActiveElements.splice(2);
         }
         console.log(previousActiveElements)
+        console.log('item', item);
     }
 
     navigation__items.forEach(function(item) {
         item.addEventListener('click', function(event) {
-            if (activeLevel2 === false)
+            if (activeLevel2 === false) {
                 solve(event, item);
+                changeIconWhenActive();
+            }
             else
                 activeLevel2 = false;
         });
@@ -98,4 +101,30 @@ export function checkNavigationActive() {
             }
         });
     });
+
+
+    function changeIconWhenActive() {
+        let noActiveElement = null;
+        let activeElement = null;
+        navigation__items.forEach(function(item) {
+            if (!(item.classList.contains('search_input_in_page_search') || item.classList.contains('navigation__item-profile'))) {
+                if (item.classList.contains('active')) {
+                    console.log(item)
+                    noActiveElement = item.querySelector('.navigation__item-logo--no_active');
+                    activeElement = item.querySelector('.navigation__item-logo--active');
+                    noActiveElement.style.display = 'none';
+                    activeElement.style.display = 'block';
+                }
+                else {
+                    noActiveElement = item.querySelector('.navigation__item-logo--no_active');
+                    activeElement = item.querySelector('.navigation__item-logo--active');
+                    noActiveElement.style.display = 'block';
+                    activeElement.style.display = 'none';
+                }
+            }
+        });
+        console.log('abc')
+    }
+
+    changeIconWhenActive();
 }
