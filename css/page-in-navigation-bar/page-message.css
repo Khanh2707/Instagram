@@ -58,6 +58,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 }
 
 .list_inbox__content__ul__li:hover {
@@ -92,6 +93,7 @@
     border-radius: 50%;
     background-color: red;
     position: absolute;
+    display: none;
 }
 
 .list_inbox__content__ul__li-name_user_and_active_state_or_new_inbox {
@@ -130,10 +132,53 @@
 
 .list_inbox__content__ul__li-icon_turn_off_notification_message {
     margin-left: 12px;
+    display: none;
 }
 
 .list_inbox__content__ul__li-icon_turn_off_notification_message svg {
     color: #a8a8a8;
+}
+
+
+.not_select_inbox {
+    width: calc(100% - 397px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not_select_inbox__title {
+    padding-top: 12px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.not_select_inbox__describe {
+    padding-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #a8a8a8;
+}
+
+.not_select_inbox__button {
+    margin-top: 16px;
+    cursor: pointer;
+    padding: 7px 16px;
+    border-radius: 8px;
+    background-color: #0095f6;
+    display: flex;
+    align-items: center;
+}
+
+.not_select_inbox__button span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.not_select_inbox__button:hover {
+    background-color: #1877f2;
 }
 
 
@@ -142,6 +187,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    display: none;
 }
 
 .detail_inbox__header {
@@ -207,11 +253,17 @@
     cursor: pointer;
 }
 
+.detail_inbox__header__icon_option-information_inbox .detail_inbox__header__icon_option-information_inbox--active {
+    display: none;
+}
+
 
 .detail_inbox__body {
     height: 100%;
     overflow: auto;
     padding-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .detail_inbox__body__time_message {

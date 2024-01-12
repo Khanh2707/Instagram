@@ -622,12 +622,3 @@ img {
 .page-see_more.active {
     display: block;
 }
-
-
-.navigation__item-home.active {
-    outline: 1px solid red;
-}
-
-.navigation__item-explore.active {
-    outline: 1px solid red;
-}

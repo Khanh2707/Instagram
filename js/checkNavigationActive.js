@@ -1,3 +1,11 @@
+import { appearPageHome } from './appearPageHome.js';
+import { appearPageExpolre } from './appearPageExpolre.js';
+import { appearPageSearch } from './appearPageSearch.js';
+import { appearPageNotification } from './appearPageNotification.js';
+import { appearPageSeeMore } from './appearPageSeeMore.js';
+import { clickInputSearch } from './clickInputSearch.js';
+import { changeIconWhenActive } from './changeIconWhenActive.js';
+
 export function checkNavigationActive() {
     const navigation__items = document.querySelectorAll('.navigation__item');
     const content = document.querySelector('.content');
@@ -7,6 +15,29 @@ export function checkNavigationActive() {
 
     function getItemLevel(item) {
         return parseInt(item.dataset.level);
+    }
+
+    navigation__items.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+            if (activeLevel2 === false) {
+                solve(event, item);
+            }
+            else
+                activeLevel2 = false;
+        });
+    });
+
+    function solve(event, item) {
+        Array.from(navigation__items).forEach(function(navItem) {
+            if (navItem.classList.contains('active') && previousActiveElement !== item && 'level' in navItem.dataset && 'level' in item.dataset) {
+                if (!previousActiveElements.includes(navItem))
+                    previousActiveElements.push(navItem);
+            }
+        });
+        previousActiveElement = item;
+        if (previousActiveElements.length > 0) {
+            removeActiveByLevel(previousActiveElements, item);
+        }
     }
 
     function removeActiveByLevel(previousActiveElements, item) {
@@ -55,32 +86,7 @@ export function checkNavigationActive() {
             });
             previousActiveElements.splice(2);
         }
-        console.log(previousActiveElements)
-        console.log('item', item);
-    }
-
-    navigation__items.forEach(function(item) {
-        item.addEventListener('click', function(event) {
-            if (activeLevel2 === false) {
-                solve(event, item);
-                changeIconWhenActive();
-            }
-            else
-                activeLevel2 = false;
-        });
-    });
-
-    function solve(event, item) {
-        Array.from(navigation__items).forEach(function(navItem) {
-            if (navItem.classList.contains('active') && previousActiveElement !== item && 'level' in navItem.dataset && 'level' in item.dataset) {
-                if (!previousActiveElements.includes(navItem))
-                    previousActiveElements.push(navItem);
-            }
-        });
-        previousActiveElement = item;
-        if (previousActiveElements.length > 0) {
-            removeActiveByLevel(previousActiveElements, item);
-        }
+        // console.log(previousActiveElements)
     }
 
     document.addEventListener('click', function(event) {
@@ -100,31 +106,16 @@ export function checkNavigationActive() {
                 }
             }
         });
+        changeIconWhenActive();
     });
 
 
-    function changeIconWhenActive() {
-        let noActiveElement = null;
-        let activeElement = null;
-        navigation__items.forEach(function(item) {
-            if (!(item.classList.contains('search_input_in_page_search') || item.classList.contains('navigation__item-profile'))) {
-                if (item.classList.contains('active')) {
-                    console.log(item)
-                    noActiveElement = item.querySelector('.navigation__item-logo--no_active');
-                    activeElement = item.querySelector('.navigation__item-logo--active');
-                    noActiveElement.style.display = 'none';
-                    activeElement.style.display = 'block';
-                }
-                else {
-                    noActiveElement = item.querySelector('.navigation__item-logo--no_active');
-                    activeElement = item.querySelector('.navigation__item-logo--active');
-                    noActiveElement.style.display = 'block';
-                    activeElement.style.display = 'none';
-                }
-            }
-        });
-        console.log('abc')
-    }
+    appearPageHome();
+    appearPageExpolre();
+    appearPageSearch();
+    appearPageNotification();
+    appearPageSeeMore();
+    clickInputSearch();
 
     changeIconWhenActive();
 }
