@@ -29,11 +29,6 @@
     background-color: #3b3b3b;
 }
 
-.main {
-    display: flex;
-    position: relative;
-}
-
 .navigation_bar {
     display: flex;
     flex-direction: column;
@@ -123,7 +118,7 @@ img {
     display: none;
 }
 
-.content {
+#content {
     margin-left: 245px;
     flex: 1;
 }
@@ -150,7 +145,7 @@ img {
         margin-bottom: 14px;
     }
 
-    .content {
+    #content {
         margin-left: 73px;
     }
 }
@@ -254,7 +249,7 @@ img {
         background-color: var(--background-black);
     }
 
-    .content {
+    #content {
         margin-left: 0;
     }
 }

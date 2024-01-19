@@ -8,7 +8,7 @@ import { changeIconWhenActive } from './changeIconWhenActive.js';
 
 export function checkNavigationActive() {
     const navigation__items = document.querySelectorAll('.navigation__item');
-    const content = document.querySelector('.content');
+    const content = document.querySelector('#content');
     var previousActiveElement = document.querySelector('.navigation__item-home');
     var previousActiveElements = [];
     let activeLevel2 = false;
