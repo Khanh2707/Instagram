@@ -118,11 +118,6 @@ img {
     display: none;
 }
 
-#content {
-    margin-left: 245px;
-    flex: 1;
-}
-
 @media (max-width: 1263px) {
     .navigation__item-span {
         display: none;
@@ -143,10 +138,6 @@ img {
     .logo-web {
         margin-top: 3px;
         margin-bottom: 14px;
-    }
-
-    #content {
-        margin-left: 73px;
     }
 }
 
@@ -177,6 +168,11 @@ img {
 
 .navigation__item-notification.active {
     outline: 1px solid #dbdbdb;
+}
+
+.navigation__item-profile.active .navigation__item-logo {
+    outline: 3px solid #dbdbdb;
+    border-radius: 50%;
 }
 
 @keyframes shrinkRightSidebar {
@@ -247,10 +243,6 @@ img {
 
     .navigation__item:hover {
         background-color: var(--background-black);
-    }
-
-    #content {
-        margin-left: 0;
     }
 }
 

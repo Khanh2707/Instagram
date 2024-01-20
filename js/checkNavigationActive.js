@@ -1,5 +1,5 @@
-import { appearPageHome } from './appearPageHome.js';
-import { appearPageExpolre } from './appearPageExpolre.js';
+import { appearPageMessage } from './appearPageMessage.js';
+import { appearPageProfile } from './appearPageProfile.js';
 import { appearPageSearch } from './appearPageSearch.js';
 import { appearPageNotification } from './appearPageNotification.js';
 import { appearPageSeeMore } from './appearPageSeeMore.js';
@@ -9,7 +9,7 @@ import { changeIconWhenActive } from './changeIconWhenActive.js';
 export function checkNavigationActive() {
     const navigation__items = document.querySelectorAll('.navigation__item');
     const content = document.querySelector('#content');
-    var previousActiveElement = document.querySelector('.navigation__item-home');
+    var previousActiveElement = document.querySelector('.navigation__item-message');
     var previousActiveElements = [];
     let activeLevel2 = false;
 
@@ -43,7 +43,7 @@ export function checkNavigationActive() {
     function removeActiveByLevel(previousActiveElements, item) {
         if (getItemLevel(item) === 1) {
             previousActiveElements.forEach(value => {
-                if (getItemLevel(value) === 1) {
+                if (getItemLevel(value) === 1 && item !== value) {
                     value.classList.remove('active');
                 }
                 else {
@@ -110,10 +110,10 @@ export function checkNavigationActive() {
     });
 
 
-    appearPageHome();
-    appearPageExpolre();
     appearPageSearch();
+    appearPageMessage();
     appearPageNotification();
+    appearPageProfile();
     appearPageSeeMore();
     clickInputSearch();
 

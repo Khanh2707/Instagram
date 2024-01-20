@@ -13,24 +13,27 @@ export function appearPageSearch() {
     function solveActive() {
         pageSearch.style.display = 'block';
         pageSearch.classList.toggle('animationAppearPageSearch');
-        const navigation__itemSpan = document.querySelectorAll('.navigation__item-span');
-        navigation__itemSpan.forEach((item) => {
-            item.classList.toggle('active');
-        });
-        const navigation_bar = document.querySelector('.navigation_bar');
-        document.querySelector('.navigation_bar').classList.toggle('active');
-        document.querySelector('.logo-web-tablet').classList.toggle('active');
-        document.querySelector('.logo-web-pc').classList.toggle('active');
-        document.querySelector('.logo-web').classList.toggle('active');
         document.querySelector('.navigation__item-search').classList.toggle('active');
-        if (window.innerWidth > 1263) {
-            if (navigation_bar.classList.contains('active')) {
-                navigation_bar.classList.remove('animationDisappearSideBar');
-                navigation_bar.classList.add('animationAppearSideBar');
-            }
-            else {
-                navigation_bar.classList.remove('animationAppearSideBar');
-                navigation_bar.classList.add('animationDisappearSideBar');
+        const navigationMessage = document.querySelector('.navigation__item-message');
+        if (!navigationMessage.classList.contains('active')) {
+            const navigation__itemSpan = document.querySelectorAll('.navigation__item-span');
+            navigation__itemSpan.forEach((item) => {
+                item.classList.toggle('active');
+            });
+            const navigation_bar = document.querySelector('.navigation_bar');
+            document.querySelector('.navigation_bar').classList.toggle('active');
+            document.querySelector('.logo-web-tablet').classList.toggle('active');
+            document.querySelector('.logo-web-pc').classList.toggle('active');
+            document.querySelector('.logo-web').classList.toggle('active');
+            if (window.innerWidth > 1263) {
+                if (navigation_bar.classList.contains('active')) {
+                    navigation_bar.classList.remove('animationDisappearSideBar');
+                    navigation_bar.classList.add('animationAppearSideBar');
+                }
+                else {
+                    navigation_bar.classList.remove('animationAppearSideBar');
+                    navigation_bar.classList.add('animationDisappearSideBar');
+                }
             }
         }
     }
