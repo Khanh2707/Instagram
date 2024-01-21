@@ -1,3 +1,4 @@
+export function eventListenerListUserInbox() {
 const list_inbox__content__ul__li = document.querySelectorAll('.list_inbox__content__ul__li');
 
 list_inbox__content__ul__li.forEach((item) => {
@@ -26,3 +27,4 @@ list_inbox__content__ul__li.forEach((item) => {
         detail_inbox.classList.add('active');
     });
 });
+}

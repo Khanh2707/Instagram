@@ -1,3 +1,4 @@
+export function eventListenerInputInbox() {
 const detail_inbox__footer__input_inbox__input = document.querySelector('.detail_inbox__footer__input_inbox__input input');
 const detail_inbox__footer__input_inbox__icon_option__group_right = document.querySelector('.detail_inbox__footer__input_inbox__icon_option__group_right');
 const detail_inbox__footer__input_inbox__button_submit = document.querySelector('.detail_inbox__footer__input_inbox__button_submit');
@@ -38,4 +39,5 @@ function checkEmptyInput() {
         detail_inbox__footer__input_inbox__icon_option__group_right.style.display = 'flex';
         detail_inbox__footer__input_inbox__button_submit.style.display = 'none';
     }
+}
 }

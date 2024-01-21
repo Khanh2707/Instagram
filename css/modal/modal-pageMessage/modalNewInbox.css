@@ -1,0 +1,211 @@
+.modal__new_inbox {
+    width: 548px;
+    border-radius: 12px;
+    background-color: #262626;
+    display: none;
+}
+
+.modal__new_inbox__header {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding-left: 48px;
+    border-bottom: 1px solid #363636;
+}
+
+.modal__new_inbox__header__title {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.modal__new_inbox__header__title span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.modal__new_inbox__header__xmark {
+    width: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.modal__new_inbox__body__address_to_and_input_search {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid #363636;
+}
+
+.modal__new_inbox__body__address_to {
+    display: flex;
+    align-items: center;
+}
+
+.modal__new_inbox__body__address_to-title span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.modal__new_inbox__body__address_to-tag_user_container {
+    display: flex;
+}
+
+.modal__new_inbox__body__address_to-tag_user {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    margin: 4px;
+    padding: 0 12px;
+    border-radius: 12px;
+    background-color: #e0f1ff;
+}
+
+.modal__new_inbox__body__address_to-tag_user > * {
+    color: #0095f6;
+    line-height: 26px;
+}
+
+.modal__new_inbox__body__address_to-tag_user span {
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.modal__new_inbox__body__address_to-tag_user svg {
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.modal__new_inbox__body__input_search {
+    padding: 4px 12px 4px 20px;
+    height: 38px;
+    flex-grow: 1;
+}
+
+.modal__new_inbox__body__input_search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modal__new_inbox__body__input_search input::placeholder {
+    color: #a8a8a8;
+}
+
+.modal__new_inbox__body__result_search {
+    height: 290px;
+    overflow-y: scroll;
+}
+
+.modal__new_inbox__body__result_search-not_found span {
+    display: block;
+    color: #a8a8a8;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 26px 24px 12px;
+}
+
+.modal__new_inbox__body__result_search-found {
+    margin-top: 16px;
+}
+
+.modal__new_inbox__body__result_search-found ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+.modal__new_inbox__body__result_search-found ul li {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-img {
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-name_and_tag_name {
+    flex-grow: 1;
+    line-height: 1.2;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-name span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-tag_name span {
+    color: #a8a8a8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-check {
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dbdfe4;
+    border-radius: 50%;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-check svg {
+    color: #0f1419;
+    display: none;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-check.active {
+    border: none;
+    background-color: #f8f9f9;
+}
+
+.modal__new_inbox__body__result_search-found__ul__li-check.active svg {
+    display: block;
+}
+
+
+.modal__new_inbox__body__input_submit_container {
+    padding: 16px;
+}
+
+.modal__new_inbox__body__input_submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 516px;
+    height: 44px;
+    border-radius: 8px;
+    opacity: 0.3;
+    background-color: #0095f6;
+}
+
+.modal__new_inbox__body__input_submit span {
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.modal__new_inbox__body__input_submit.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal__new_inbox__body__input_submit.active:hover {
+    background-color: #1877f2;
+}

@@ -1,4 +1,4 @@
-
+export function informationDetailInbox() {
     const information_detail_inbox = document.querySelector('.information_detail_inbox');
     const detail_inbox__header__icon_optionInformation_inbox = document.querySelector('.detail_inbox__header__icon_option-information_inbox');
 
@@ -20,3 +20,4 @@
             
         }
     });
+}
