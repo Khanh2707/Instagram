@@ -1,14 +1,15 @@
 export function appearPageMessage() {
-    const a = document.querySelector('.navigation__item-message');
-    $(document).ready(function() {
+    $('#content').load('page-in-navigation-bar/page-message.html', function() {
+        const a = document.querySelector('.navigation__item-message');
+        let main = document.querySelector('.main.page-message');
         if (a.classList.contains('active')) {
-            $('#content').load('../page-message.html');
+            main.style.display = 'flex';
             solveActive();
         }
         a.addEventListener('click', function() {
             if (!a.classList.contains('active')) {
                 a.classList.add('active');
-                $('#content').load('../page-message.html');
+                main.style.display = 'flex';
                 solveActive();
             }
         })

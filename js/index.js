@@ -1,5 +1,5 @@
-import { checkNavigationActive } from './checkNavigationActive.js';
-import { appearModalCreateContent } from './appearModalCreateContent.js';
+import { checkNavigationActive } from './navigation-bar/checkNavigationActive.js';
+import { appearModalCreateContent } from './navigation-bar/appearModalCreateContent.js';
 
 $(document).ready(function() {
     // Load navigationBar.html

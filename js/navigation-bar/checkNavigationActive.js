@@ -3,7 +3,7 @@ import { appearPageProfile } from './appearPageProfile.js';
 import { appearPageSearch } from './appearPageSearch.js';
 import { appearPageNotification } from './appearPageNotification.js';
 import { appearPageSeeMore } from './appearPageSeeMore.js';
-import { clickInputSearch } from './clickInputSearch.js';
+import { clickInputSearch } from '../clickInputSearch.js';
 import { changeIconWhenActive } from './changeIconWhenActive.js';
 
 export function checkNavigationActive() {
