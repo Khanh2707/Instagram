@@ -7,6 +7,10 @@ export function appearPageMessage() {
             solveActive();
         }
         a.addEventListener('click', function() {
+            let content = document.querySelector('#content');
+            content.querySelectorAll('.main').forEach(function(item) {
+                item.style.display = 'none'
+            })
             if (!a.classList.contains('active')) {
                 a.classList.add('active');
                 main.style.display = 'flex';

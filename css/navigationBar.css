@@ -84,6 +84,16 @@ img {
     position: relative;
 }
 
+.navigation__item-logo--no_active > * {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__item-logo--active > * {
+    display: flex;
+    align-items: center;
+}
+
 .navigation__item-logo--active {
     display: none;
 }
