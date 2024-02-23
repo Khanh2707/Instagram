@@ -1,0 +1,141 @@
+:root {
+    color-scheme: light;
+}
+
+body {
+    background-color: #fff;
+}
+
+.background__page_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.background__page_login__box_login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 350px;
+    border: 1px solid #dbdbdb;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.background__page_login__box_login__logo {
+    margin-top: 46px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.background__page_login__box_login__form_login {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.background__page_login__box_login__form_login input {
+    width: 268.4px;
+}
+
+.background__page_login__box_login__form_login input[type="text"] {
+    margin-bottom: 6px;
+    border-radius: 3px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px;
+    outline: none;
+}
+
+.background__page_login__box_login__form_login input[type="text"]:focus {
+    border: 1px solid #a8a8a8;
+}
+
+.background__page_login__box_login__form_login input[type="submit"] {
+    margin: 8px 0;
+    border: none;
+    padding: 7px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f5f5f5;
+    background-color: #0095f6;
+    opacity: 0.7;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.background__page_login__box_login__text_or {
+    display: flex;
+    width: 268.4px;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.background__page_login__box_login__text_or span {
+    color: #737373;
+    margin: 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.background__page_login__box_login__text_or__dash {
+    height: 1px;
+    flex-grow: 1;
+    background-color: #dbdbdb;
+}
+
+.background__page_login__box_login__login_by_facebook {
+    display: flex;
+    margin: 8px auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.background__page_login__box_login__login_by_facebook__icon {
+    color: #385185;
+    margin-right: 8px;
+}
+
+.background__page_login__box_login__login_by_facebook__text span {
+    color: #385185;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.background__page_login__box_login__forgot_password {
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.background__page_login__box_login__forgot_password span {
+    color: #00376b;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.background__page_login__box_swap_to_register {
+    text-align: center;
+    width: 350px;
+    border: 1px solid #dbdbdb;
+    padding: 20px 0;
+}
+
+.background__page_login__box_swap_to_register__short_description {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.background__page_login__box_swap_to_register__button_swap_to_register {
+    color: #0095f6;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
